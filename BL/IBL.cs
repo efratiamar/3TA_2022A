@@ -9,7 +9,7 @@ namespace BLApi
 
         IEnumerable<BO.Student> GetAllStudents();
 
-        IEnumerable<BO.StudentForList> GetAllStudentsForList();
+        //IEnumerable<BO.StudentForList> GetAllStudentsForList();
 
 
 

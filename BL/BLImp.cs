@@ -71,10 +71,10 @@ namespace BL
         }
 
         
-        public IEnumerable<BO.StudentForList> GetAllStudentsForList()
-        {
-            throw new NotImplementedException();
-        }
+        //public IEnumerable<BO.StudentForList> GetAllStudentsForList()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
     }
 }
