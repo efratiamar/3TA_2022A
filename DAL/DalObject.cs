@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 using DLApi;
+using DO;
 
 namespace DalObject
 {
-    public partial class DalObject : IDAL
+    public class DalObject : IDAL
     {
         public DalObject()
         {
@@ -34,6 +35,7 @@ namespace DalObject
         {
             return from stud in DataSource.StudentsList
                    select stud;
+            //return DataSource.StudentsList;
         }
 
         public void AddStudent(DO.Student stud)
@@ -51,7 +53,7 @@ namespace DalObject
             if (count == 0)
                 throw new DO.MissingIdException(stud.ID, "Student");
 
-            AddStudent(stud);
+            DataSource.StudentsList.Add(stud);
         }
 
         public void DelStudent(int id)
@@ -60,6 +62,13 @@ namespace DalObject
 
             if (count == 0)
                 throw new DO.MissingIdException(id, "Student");
+        }
+
+        public IEnumerable<Student> GetStudentsByPerdicate(Predicate<Student> predicate)
+        {
+            return from stud in DataSource.StudentsList
+                   where predicate(stud)
+                   select stud;
         }
         #endregion
 
@@ -102,8 +111,10 @@ namespace DalObject
                    select sic;
         }
 
+
+
         #endregion
 
-    
+
     }
 }

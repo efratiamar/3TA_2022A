@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 
 using BLApi;
+using DLApi;
 
 namespace BL
 {
     class BLImp : IBL
     {
-        DalObject.DalObject dl;
+        IDAL dl;
         public BLImp()
         {
             dl = new DalObject.DalObject();

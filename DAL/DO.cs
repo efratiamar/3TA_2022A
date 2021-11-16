@@ -16,7 +16,7 @@ namespace DO
         //public override string ToString() => this.ToStringProperty();
     }
 
-    public class Course
+    public struct Course
     {
         public int ID { get; set; }
         public string Name { get; set; }
@@ -26,11 +26,14 @@ namespace DO
 
     }
 
-    public class StudentInCourse
+    public struct StudentInCourse
     {
         public int StudentId { get; set; }
         public int CourseId { get; set; }
         public float? Grade { get; set; }
     }
+    
+    //Lecturer
+
 }
 

@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace BO
 {
-
     public class Student
     {
         public int ID { get; set; }

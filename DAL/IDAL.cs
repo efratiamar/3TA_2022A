@@ -9,14 +9,16 @@ namespace DLApi
     public interface IDAL
     {
 
-
         //CRUD Student
         public DO.Student GetStudent(int id);
         public bool CheckStudent(int id);
-        public IEnumerable<DO.Student> GetALLStudents();
         public void AddStudent(DO.Student stud);
         public void UpdStudent(DO.Student stud);
         public void DelStudent(int id);
+        public IEnumerable<DO.Student> GetALLStudents();
+
+        public IEnumerable<DO.Student> GetStudentsByPerdicate(Predicate<DO.Student> predicate);
+
 
         //CRUD StudentInCourse
         //AddCourse
