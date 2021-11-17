@@ -11,7 +11,7 @@ namespace ConsoleTestBL
 
             try
             {
-                bl.GetStudent(1);
+                BO.Student boStudent = bl.GetStudent(1);
             }
             catch (BO.MissingIdException ex)
             {

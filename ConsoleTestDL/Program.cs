@@ -44,7 +44,7 @@ namespace ConsoleTestDL
 
             try
             {
-                dl.GetStudent(1);
+                DO.Student boStudent =  dl.GetStudent(1);
             }
             catch(DO.MissingIdException ex)
             {
