@@ -9,7 +9,7 @@ using DLApi;
 
 namespace BL
 {
-    class BLImp : IBL
+    public class BLImp : IBL
     {
         IDAL dl;
         public BLImp()

@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace ConsoleUI
+namespace ConsoleTestDL
 {
     class Program
     {
@@ -41,11 +41,16 @@ namespace ConsoleUI
         {
             
            DalObject.DalObject dl = new DalObject.DalObject();
-            
-           dl.GetStudent(1);
-                     
 
-            
+            try
+            {
+                dl.GetStudent(1);
+            }
+            catch(DO.MissingIdException ex)
+            {
+                Console.WriteLine(ex);
+            }
+                                 
         }
     }
 }
