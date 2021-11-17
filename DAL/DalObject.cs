@@ -87,7 +87,6 @@ namespace DalObject
             return DataSource.CoursesList.Any(crs => crs.ID == id);
         }
 
-
         public IEnumerable<DO.Course> GetALLCourses()
         {
             return from crs in DataSource.CoursesList
