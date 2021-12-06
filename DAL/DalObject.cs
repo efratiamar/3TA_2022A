@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 using DLApi;
-using DO;
 
 namespace DalObject
 {
@@ -29,13 +28,6 @@ namespace DalObject
         public bool CheckStudent(int id)
         {
             return DataSource.StudentsList.Any(stud => stud.ID == id);
-        }
-
-        public IEnumerable<DO.Student> GetALLStudents()
-        {
-            return from stud in DataSource.StudentsList
-                   select stud;
-            //return DataSource.StudentsList;
         }
 
         public void AddStudent(DO.Student stud)
@@ -64,7 +56,13 @@ namespace DalObject
                 throw new DO.MissingIdException(id, "Student");
         }
 
-        public IEnumerable<Student> GetStudentsByPerdicate(Predicate<Student> predicate)
+        public IEnumerable<DO.Student> GetALLStudents()
+        {
+            return from stud in DataSource.StudentsList
+                   select stud;
+            //return DataSource.StudentsList;
+        }
+        public IEnumerable<DO.Student> GetStudentsByPerdicate(Predicate<DO.Student> predicate)
         {
             return from stud in DataSource.StudentsList
                    where predicate(stud)
