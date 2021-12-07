@@ -11,6 +11,7 @@ namespace BO
     {
         public int ID { get; set; }
         public string Name { get; set; }
+
         public int StartYear { get; set; }
         public StudentStatus Status { get; set; }
         public IEnumerable<CourseForList> StudentCourses { get; set; }

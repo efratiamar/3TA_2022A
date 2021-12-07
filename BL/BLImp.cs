@@ -67,7 +67,6 @@ namespace BL
                        Status = (BO.StudentStatus)doStud.Status,
                        StudentCourses = GetCoursesPerStudent(doStud.ID)
                    };
-
         }
 
         

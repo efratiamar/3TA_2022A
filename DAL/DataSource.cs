@@ -40,18 +40,21 @@ namespace DalObject
                 new DO.Student
                 {
                     ID = rand.Next(100, 200),
+                    Name = "Yosef",
                     StartYear = 2018,
                     Status = DO.StudentStatus.ACTIVE,
                 },
                 new DO.Student
                 {
                     ID = rand.Next(100, 200),
+                    Name = "Aharon",
                     StartYear = 2017,
                     Status = DO.StudentStatus.FINISHED,
                 },
                 new DO.Student
                 {
                     ID = rand.Next(100, 200),
+                    Name = "Moshe",
                     StartYear = 2013,
                     Status = DO.StudentStatus.FINISHED,
                 }
